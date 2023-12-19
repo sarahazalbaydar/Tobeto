@@ -1,0 +1,24 @@
+{
+  "name": "nodejs-starter",
+  "version": "1.0.1",
+  "description": "Nodejs baslangic projesi",
+  "main": "index.js",
+  "keywords": [
+    "javascript",
+    "nodejs",
+    "react"
+  ],
+  "author": "tobeto",
+  "license": "ISC",
+  "dependencies": {
+    "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node index.js",
+    "tobeto": "node index.js && echo islem bitti"
+  }
+}

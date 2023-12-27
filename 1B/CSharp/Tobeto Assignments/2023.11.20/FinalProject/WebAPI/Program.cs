@@ -31,6 +31,16 @@ builder.Services.AddSwaggerGen();
 //builder.Services.AddSingleton<ICustomerService, CustomerManager>();
 //builder.Services.AddSingleton<ICustomerDal, EfCustomerDal>();
 
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("MyCorsPolicy", builder =>
+    {
+        builder.AllowAnyOrigin()
+               .AllowAnyMethod()
+               .AllowAnyHeader();
+    });
+});
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -39,6 +49,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+app.UseCors("MyCorsPolicy");
 
 app.UseHttpsRedirection();
 

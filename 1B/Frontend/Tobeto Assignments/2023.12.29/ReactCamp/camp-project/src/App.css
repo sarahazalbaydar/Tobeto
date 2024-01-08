@@ -1,0 +1,10 @@
+/* uygulamanın stili buradan gelir*/
+
+.App {
+  text-align: center;
+}
+
+.ui.main.container {
+  /*ui - semantic ui'dan gelir - container da container old. belirtir*/
+  margin-top: 4em;
+}
